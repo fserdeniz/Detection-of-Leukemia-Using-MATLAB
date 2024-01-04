@@ -1,7 +1,7 @@
-% Resim Okuma
-image = imread('lösemi2.jpg');
+% Read Image
+image = imread('leukemia2.jpg');
 
-% Gradyan Filtresi-Sobel
+% Gradient-Sobel
 grayImage = rgb2gray(image);
 sobelX = [-1 0 1; -2 0 2; -1 0 1];
 sobelY = sobelX';
@@ -11,27 +11,27 @@ Gy = imfilter(double(grayImage), sobelY);
 
 magnitude = sqrt(Gx.^2 + Gy.^2);
 
-% Resmi Genişletme
+% Dilate Image
 seVertical = strel('line', 5, 90);
 seHorizontal = strel('line', 5, 0);
 
 dilatedImage = imdilate(magnitude, [seVertical seHorizontal]);
 
-% Boşlukları Doldur
+% Fill Holes
 filledImage = imfill(dilatedImage, 'holes');
 
-% Resim Kenarlarını Temizle
+% Clear Borders
 clearBorderImage = imclearborder(filledImage);
 
-% Kırmızıya Çevirme?
+% Turn Red
 pinkMask = image(:, :, 1) > 200 & image(:, :, 2) < 100 & image(:, :, 3) > 200;
 imageWithRedPink = image;
 imageWithRedPink(repmat(pinkMask, [1 1 3])) = 255;
 
-% Final Görüntüsü
+% Final Image
 imageFinal = image + imageWithRedPink;
 
-% Sonuçları Gösterme
+% Show Results
 figure;
 
 subplot(2, 3, 1);
