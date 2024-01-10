@@ -40,7 +40,7 @@ title('Input Image');
 
 subplot(2, 3, 2);
 imshow(magnitude, []);
-title('Gradyan Magnitude');
+title('Gradient Magnitude');
 
 subplot(2, 3, 3);
 imshow(dilatedImage, []);
