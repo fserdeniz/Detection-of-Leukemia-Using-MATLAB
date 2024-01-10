@@ -36,7 +36,7 @@ figure;
 
 subplot(2, 3, 1);
 imshow(image);
-title('Girişte Verilen Resim');
+title('Input Image');
 
 subplot(2, 3, 2);
 imshow(magnitude, []);
@@ -44,16 +44,16 @@ title('Gradyan Magnitude');
 
 subplot(2, 3, 3);
 imshow(dilatedImage, []);
-title('Genişletilmiş Görüntü');
+title('Dilated Image');
 
 subplot(2, 3, 4);
 imshow(filledImage, []);
-title('Delikleri Doldurulmuş Görüntü');
+title('Image with Filled Holes');
 
 subplot(2, 3, 5);
 imshow(clearBorderImage, []);
-title('Kenarları Temizlenmiş Görüntü');
+title('Image with Cleared Borders');
 
 subplot(2, 3, 6);
 imshow(imageFinal);
-title('Sonuç');
+title('Output Image');
