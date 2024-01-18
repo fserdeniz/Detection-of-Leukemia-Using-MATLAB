@@ -15,3 +15,5 @@ This is the implementation of the article called "Detection of Leukemia Using MA
 > expensive testing and lab equipment. In this paper used
 > detection of leukemia cells in the normal blood cells using
 > MATLAB.
+
+_Mishra, S. J., & Deshmukh, A. P. (2015). Detection of Leukemia Using MATLAB. International Journal of Advanced Research in Electronics and Communication Engineering, 4(2), 394-398._
